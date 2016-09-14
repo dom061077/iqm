@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic',  'starter.services'])
+angular.module('App', ['ionic'/*,  'starter.services'*/])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -42,12 +42,8 @@ angular.module('starter', ['ionic',  'starter.services'])
 
   .state('tab.quienessomos', {
     url: '/quienessomos',
-    views: {
-      'tab-quienessomos': {
-        templateUrl: 'views/quienessomos.html',
-        controller: 'QuienesSomosCtrl'
-      }
-    }
+    templateUrl: 'views/quienessomos/quienessomos.html',
+    controller: 'QuienesSomosCtrl'
   })
 
 //  .state('tab.chats', {
