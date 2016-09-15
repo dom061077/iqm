@@ -1,8 +1,8 @@
 angular.module('App')
     .controller('QuienesSomosCtrl',function($scope,$http,$ionicLoading){
         $ionicLoading.show();
-        $http.get('https://localhost:/8080/cima/quienessomos').success(function (data) {
-          //$scope.weather = weather;
+        $http.get('http://192.168.1.4:8080/medfireweb/mobileContentManager/quienesSomos').success(function (data) {
+          $scope.quienessomos = data.contenido;
           $ionicLoading.hide();
         }).error(function (err) {
           $ionicLoading.show({
@@ -11,12 +11,12 @@ angular.module('App')
           });
         });
 
-        $scope.getDirection = function (degree) {
+        /*$scope.getDirection = function (degree) {
           if (degree > 338) {
             degree = 360 - degree;
           }
           var index = Math.floor((degree + 22) / 45);
           return directions[index];
-        };
+        };*/
     }
 );

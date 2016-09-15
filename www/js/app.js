@@ -41,9 +41,13 @@ angular.module('App', ['ionic'/*,  'starter.services'*/])
   // Each tab has its own nav history stack:
 
   .state('tab.quienessomos', {
-    url: '/quienessomos',
-    templateUrl: 'views/quienessomos/quienessomos.html',
-    controller: 'QuienesSomosCtrl'
+      url: '/quienessomos',
+      views: {
+        'tab-quienessomos': {
+          templateUrl: 'views/quienessomos/quienessomos.html',
+          controller: 'QuienesSomosCtrl'
+        }
+      }
   })
 
 //  .state('tab.chats', {
