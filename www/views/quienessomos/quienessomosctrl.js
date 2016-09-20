@@ -1,8 +1,8 @@
 angular.module('App')
     .controller('QuienesSomosCtrl',function($scope,$http,$ionicLoading){
         $ionicLoading.show();
-        $http.get('http://192.168.1.4:8080/medfireweb/mobileContentManager/quienesSomos').success(function (data) {
-          $scope.quienessomos = data.contenido;
+        $http.get('http://192.168.1.12:8080/medfireweb/mobileContenido/quienesSomos').success(function (data) {
+          $scope.quienessomos = data.quienessomos;
           $ionicLoading.hide();
         }).error(function (err) {
           $ionicLoading.show({
