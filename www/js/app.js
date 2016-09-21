@@ -49,6 +49,15 @@ angular.module('App', ['ionic'/*,  'starter.services'*/])
         }
       }
   })
+  .state('tab.procedimientos',{
+      url: '/procedimientos',
+      views:{
+          'tab-procedimientos':{
+              templateUrl:'views/procedimientos/procedimientos.html',
+              controller: ''
+          }
+      }
+  })
 
 //  .state('tab.chats', {
 //      url: '/chats',
