@@ -54,7 +54,7 @@ angular.module('App', ['ionic'/*,  'starter.services'*/])
       views:{
           'tab-procedimientos':{
               templateUrl:'views/procedimientos/procedimientos.html',
-              controller: ''
+              controller: 'ProcedimientosCtrl'
           }
       }
   })
@@ -89,6 +89,6 @@ angular.module('App', ['ionic'/*,  'starter.services'*/])
 //  });
 
   // if none of the above states are matched, use this as the fallback
-  $urlRouterProvider.otherwise('/tab/quienessomos');
+  //$urlRouterProvider.otherwise('/tab/quienessomos');
 
 });

@@ -1,14 +1,12 @@
-<ion-view view-title="Local Restaurants">
+<ion-view view-title="Procedimientos">
   <ion-content>
-    <div class="list card" ng-repeat="restaurant in restaurants">
+    <div class="list card" ng-repeat="procedimiento in procedimientos">
       <div class="item">
-        <h2>{{restaurant.name}}</h2>
-        <p>{{restaurant.address}}, {{restaurant.city}}</p>
+        <h2>{{procedimiento.titulo}}</h2>
+        <p>procedimiento.descripcion</p>
       </div>
-      <div class="item item-image">
-        <img ng-src="{{restaurant.image_url}}" />
-      </div>
+
     </div>
-    <ion-infinite-scroll on-infinite="getRestaurants()" ng-if="total > page" immediate-check="false"></ion-infinite-scroll>
+    <!--ion-infinite-scroll on-infinite="getRestaurants()" ng-if="total > page" immediate-check="false"></ion-infinite-scroll-->
   </ion-content>
 </ion-view>
