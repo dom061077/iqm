@@ -58,6 +58,16 @@ angular.module('App', ['ionic'/*,  'starter.services'*/])
           }
       }
   })
+  .state('tab.procedimientodetail',{
+      url: '/procedimientodetail',
+      views:{
+          'tab-procedimientodetail':{
+              templeUrl:'views/procedimientos/procedimientodetails.html',
+              controller: 'ProcedimientoDetailCtrl'
+                           
+          }
+      }
+  })
 
 //  .state('tab.chats', {
 //      url: '/chats',
@@ -89,6 +99,6 @@ angular.module('App', ['ionic'/*,  'starter.services'*/])
 //  });
 
   // if none of the above states are matched, use this as the fallback
-  //$urlRouterProvider.otherwise('/tab/quienessomos');
+  $urlRouterProvider.otherwise('/tab/quienessomos');
 
 });

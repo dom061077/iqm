@@ -1,12 +1,16 @@
 <ion-view view-title="Procedimientos">
   <ion-content>
-    <div class="list card" ng-repeat="procedimiento in procedimientos">
-      <div class="item">
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="procedimiento in procedimientos" type="item-text-wrap" href="#/tab/procedimientodetail">
+        <!--img ng-src="{{chat.face}}" -->
         <h2>{{procedimiento.titulo}}</h2>
-        <p>procedimiento.descripcion</p>
-      </div>
+        <p>{{procedimiento.descripcion}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
 
-    </div>
-    <!--ion-infinite-scroll on-infinite="getRestaurants()" ng-if="total > page" immediate-check="false"></ion-infinite-scroll-->
+        <ion-option-button class="button-assertive" ng-click="remove(chat)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
   </ion-content>
 </ion-view>
