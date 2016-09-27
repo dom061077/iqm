@@ -62,7 +62,7 @@ angular.module('App', ['ionic'/*,  'starter.services'*/])
       url: '/procedimientodetail',
       views:{
           'tab-procedimientodetail':{
-              templeUrl:'views/procedimientos/procedimientodetails.html',
+              templateUrl:'views/procedimientos/procedimientodetail.html',
               controller: 'ProcedimientoDetailCtrl'
                            
           }
