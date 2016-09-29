@@ -1,47 +1,32 @@
-angular.module('App', [])
+angular.module('starter.services', [])
 
-.factory('Chats', function() {
+.factory('Procedimientos', function($http,$scope){
   // Might use a resource here that returns a JSON array
+  $scope.page = 0;
+  $scope.total = 1;
+  procedimientos = [];
 
-  // Some fake testing data
-  var chats = [{
-    id: 0,
-    name: 'Ben Sparrow',
-    lastText: 'You on your way?',
-    face: 'img/ben.png'
-  }, {
-    id: 1,
-    name: 'Max Lynx',
-    lastText: 'Hey, it\'s me',
-    face: 'img/max.png'
-  }, {
-    id: 2,
-    name: 'Adam Bradleyson',
-    lastText: 'I should buy a boat',
-    face: 'img/adam.jpg'
-  }, {
-    id: 3,
-    name: 'Perry Governor',
-    lastText: 'Look at my mukluks!',
-    face: 'img/perry.png'
-  }, {
-    id: 4,
-    name: 'Mike Harrington',
-    lastText: 'This is wicked good ice cream.',
-    face: 'img/mike.png'
-  }];
-
+    $scope.page++;
+    
+    $http.get('http://localhost:8080/medfireweb/mobileContenido/procedimientos').success(function (response) {
+      angular.forEach(response, function (procedimiento) {
+        $scope.procedimientos.push(procedimiento);
+      });
+    }).error(function (err) {
+      console.log(err);
+    });
+  
   return {
     all: function() {
-      return chats;
+      return procedimientos;
     },
-    remove: function(chat) {
-      chats.splice(chats.indexOf(chat), 1);
+    remove: function(procedimiento) {
+      procedimientos.splice(chats.indexOf(chat), 1);
     },
-    get: function(chatId) {
-      for (var i = 0; i < chats.length; i++) {
-        if (chats[i].id === parseInt(chatId)) {
-          return chats[i];
+    get: function(procId) {
+      for (var i = 0; i < procedimientos.length; i++) {
+        if (chats[i].id === parseInt(procId)) {
+          return procedimientos[i];
         }
       }
       return null;
