@@ -59,9 +59,9 @@ angular.module('App', ['ionic',  'starter.services'])
       }
   })
   .state('tab.procedimientodetail',{
-      url: '/procedimientodetail/:procId',
+      url: '/procedimientos/:procId',
       views:{
-          'tab-procedimientodetail':{
+          'tab-procedimientos':{
               templateUrl:'views/procedimientos/procedimientodetail.html',
               controller: 'ProcedimientoDetailCtrl'
                            
