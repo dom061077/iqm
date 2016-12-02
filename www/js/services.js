@@ -4,7 +4,7 @@ angular.module('starter.services', [])
   procedimientos = [];
 
     $ionicLoading.show();
-    $http.get('http://200.58.126.188:8080/cima/mobileContenido/procedimientos').success(function (response) {
+    $http.get('http://192.168.1.8:8080/medfireweb/mobileContenido/procedimientos').success(function (response) {
       angular.forEach(response, function (procedimiento) {
         procedimientos.push(procedimiento);
       });
