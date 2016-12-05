@@ -1,9 +1,8 @@
 angular.module('App')
-    .controller('QuienesSomosCtrl',function($scope,$http,$ionicLoading){
+    .controller('SoyCandidatoCtrl',function($scope,$http,$ionicLoading){
         $ionicLoading.show();
         $http.get('http://192.168.1.57:8080/medfireweb/mobileContenido/quienesSomos').success(function (data) {
-          $scope.quienessomos = data.quienessomos;
-          
+          $scope.soyCandidato = data.soyCandidato;
           $ionicLoading.hide();
         }).error(function (err) {
           $ionicLoading.show({

@@ -68,6 +68,15 @@ angular.module('App', ['ionic',  'starter.services'])
           }
       }
   })
+  .state('tab.soycandidato',{
+      url: '/soycandidato',
+      views:{
+          'tab-soycandidato':{
+              templateUrl:'views/soycandidato/soycandidato.html',
+              controller: 'SoyCandidatoCtrl'
+          }
+      }
+  })
 
 //  .state('tab.chats', {
 //      url: '/chats',
