@@ -1,13 +1,14 @@
 angular.module('App')
     .controller('QuienesSomosCtrl',function($scope,$http,$ionicLoading){
         $ionicLoading.show();
-        $http.get('http://dom061077.ddns.net:8080/cima/mobileContenido/quienesSomos').success(function (data) {
+        $http.get($rootScope.host+'/mobileContenido/quienesSomos').success(function (data) {
           $scope.quienessomos = data.quienessomos;
           
           $ionicLoading.hide();
         }).error(function (err) {
+          var error=err;  
           $ionicLoading.show({
-            template: 'No se puede traer el contenido',
+            template: 'No se puede traer el contenido '+error,
             duration: 3000
           });
         });

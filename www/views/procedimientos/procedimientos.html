@@ -5,7 +5,7 @@
         <!--img ng-src="{{chat.face}}" -->
         <h2>{{procedimiento.titulo}}</h2>
         <p>{{procedimiento.descripcion}}</p>
-        <p><img src="{{procedimiento.urlVideoImg}}"/></p>
+        <p><img image-lazy-src="{{procedimiento.urlVideoImg}}" image-lazy-loader="android"/></p>
       </ion-item>
     </ion-list>
   </ion-content>

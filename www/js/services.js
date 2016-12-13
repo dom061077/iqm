@@ -4,7 +4,7 @@ angular.module('starter.services', [])
   procedimientos = [];
 
     $ionicLoading.show();
-    $http.get('http://dom061077.ddns.net:8080/cima/mobileContenido/procedimientos').success(function (response) {
+    $http.get($rootScope.host+'/mobileContenido/procedimientos').success(function (response) {
       angular.forEach(response, function (procedimiento) {
         procedimientos.push(procedimiento);
       });
