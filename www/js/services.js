@@ -1,5 +1,5 @@
 angular.module('starter.services', [])
-.factory('Procedimientos', function($http,$ionicLoading){
+.factory('Procedimientos', function($http,$ionicLoading,$rootScope){
   // Might use a resource here that returns a JSON array
   procedimientos = [];
 

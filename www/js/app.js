@@ -7,8 +7,10 @@
 // 'starter.controllers' is found in controllers.js
 angular.module('App', ['ionic',  'starter.services'])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $rootScope) {
+    
   $ionicPlatform.ready(function() {
+      $rootScope.host = 'http://localhost:8080/medfireweb';
     // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
     // for form inputs)
     if (window.cordova && window.cordova.plugins && window.cordova.plugins.Keyboard) {
@@ -24,7 +26,7 @@ angular.module('App', ['ionic',  'starter.services'])
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
- //$rootScope.host = 'http://localhost:8080/medfireweb';
+ 
   // Ionic uses AngularUI Router which uses the concept of states
   // Learn more here: https://github.com/angular-ui/ui-router
   // Set up the various states which the app can be in.

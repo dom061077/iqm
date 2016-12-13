@@ -1,5 +1,5 @@
 angular.module('App')
-    .controller('QuienesSomosCtrl',function($scope,$http,$ionicLoading){
+    .controller('QuienesSomosCtrl',function($scope,$rootScope,$http,$ionicLoading){
         $ionicLoading.show();
         $http.get($rootScope.host+'/mobileContenido/quienesSomos').success(function (data) {
           $scope.quienessomos = data.quienessomos;

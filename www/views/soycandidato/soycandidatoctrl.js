@@ -1,5 +1,5 @@
 angular.module('App')
-    .controller('SoyCandidatoCtrl',function($scope,$http,$ionicLoading){
+    .controller('SoyCandidatoCtrl',function($scope,$rootScope,$http,$ionicLoading){
         $ionicLoading.show();
         $http.get($rootScope.host+'/mobileContenido/quienesSomos').success(function (data) {
           $scope.soyCandidato = data.soyCandidato;
